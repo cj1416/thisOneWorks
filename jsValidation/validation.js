@@ -1,7 +1,8 @@
-/* Form Validation Example */
-/* Personal Web Site-Visitor Form Validation */
-/* See comments with TODO for code you need to implement */
-
+//Updates: 
+//-added hide and show to the form in initValidation in else.
+//-validateState added an uppercase function and a loop to search abbreviations.
+//-validatecheckboxgroup now sends a message if a box is left unchecked and changes valid to True if true.
+//-(fieldname).html added to end for message
 const stateAbbreviations = [
   'AL','AK','AS','AZ','AR','CA','CO','CT','DE','DC','FM','FL','GA',
   'GU','HI','ID','IL','IN','IA','KS','KY','LA','ME','MH','MD','MA',
@@ -11,52 +12,35 @@ const stateAbbreviations = [
  ];
         
 function initValidation(formName) {
-
   let $form = $(formName);
-
   $('form :input').change(function(ev){
     validateForm();
     if(!this.checkValidity())
       $(this).addClass("was-validated")
-
-    //NOTE: we use 'was-validated' class so that you show the error indications only for the single field rather
-    //than the whole form at once
   });
-  
+
   $form.submit(function(event){
     $form = $(this);
     formEl=$form.get(0);
-
-    event.preventDefault();  //prevent default browser submit
-    event.stopPropagation(); //stop event bubbling
-
+    event.preventDefault(); 
+    event.stopPropagation();
     validateForm();
 
     if (!formEl.checkValidity()){
       $(":input").addClass("was-validated")
     }
     else{
-      //TODO
-      //hide form
       $("#myform").hide();      
-      //show thank you message
       $("#complete").show();
-      //alert('Thank you');
     }
-   
-
   });
 }
 
 function validateForm() {
-  
   validateState("#state", "You must enter a valid two character state code, e.g., UT");
-  
-  /*note, to validate the group, just passing in id of one of them ("#newspaper"), we will use groupName to check status of group.  Just call setElementValidity on the '#newspaper' element to show the error message*/
- 
-  validateCheckboxGroup("#newspaper", "find-page", "you must select at least one!");
-  
+  validateCheckboxGroup("#newspaper", "find-page", "you must select at least one!"); 
 }
+
 function validateState(id, msg){
   $el = $(id).val().toUpperCase();
   let valid=false;
@@ -67,22 +51,15 @@ function validateState(id, msg){
       break;
     }
   }
-  //TODO  
-  //check whether the value is in the stateAbbreviations array
   setElementValidity(id, valid, msg);
 }
 
 function validateCheckboxGroup(fieldName, groupName, message) {
   let valid=false;
-
-  //TODO
-  //Validate whether any of the checkboxes are checked. set 'valid' to true if checked
   if ($("input[name=" + $(groupName).selector + "]:checked").length) {
     valid=true;
   }
-
   setElementValidity(fieldName, valid, message);
-
   return valid;
 }
 
@@ -90,11 +67,10 @@ function validateCheckboxGroup(fieldName, groupName, message) {
 function setElementValidity(fieldName, valid, message){
   let $field=$(fieldName);
   let el = $field.get(0);
-  if (valid) {  //it has a value
-    el.setCustomValidity('');  //sets to no error message and field is valid
+  if (valid) {
+    el.setCustomValidity('');
   } else {
-    el.setCustomValidity(message);   //sets error message and field gets 'invalid' stat
+    el.setCustomValidity(message);
   }
-  //TODO  insert or remove message in error div for element
-  $(fieldName).html(el.validationMessage);//not showing a message yet.
+  $(fieldName).html(el.validationMessage);
 }

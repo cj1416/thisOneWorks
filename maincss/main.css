@@ -1,12 +1,10 @@
 /* 
 Updates,
--a: removed flex row.
--.menu: added text align center.
--flex button: changed color, cursor pointer, font weight,etc.
--.container: font color/weight changed. Margin auto changed to left.
-
-
-
+-added elements and container for the validation form.
+-Changed font colors.
+-Changed some centering and aligned left.
+-I put the text label above the text boxes for looks. Kinda thought it made it easier to read.
+-added an h3 for a form message to appear upon completion of the validation form.
 */
 @media screen and (min-width:701px) {
     .grid-container {
