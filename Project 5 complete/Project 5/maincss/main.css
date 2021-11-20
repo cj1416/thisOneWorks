@@ -1,0 +1,326 @@
+/* 
+Updates,
+-a: removed flex row.
+-.menu: added text align center.
+-flex button: changed color, cursor pointer, font weight,etc.
+-.container: font color/weight changed. Margin auto changed to left.
+
+
+
+*/
+@media screen and (min-width:701px) {
+    .grid-container {
+        display: grid;
+        grid-template-columns: repeat(8,1fr);
+        grid-template-rows: repeat(15,1fr);
+        grid-template-areas:
+        "header header header header header header header header"
+        "asideLeft menu menu menu menu menu asideRight asideRight"
+        "asideLeft main main main main main asideRight asideRight"
+        "asideLeft main main main main main asideRight asideRight"
+        "asideLeft main main main main main asideRight asideRight"
+        "asideLeft main main main main main asideRight asideRight"
+        "asideLeft main main main main main asideRight asideRight"
+        "asideLeft main main main main main asideRight asideRight"
+        "asideLeft main main main main main asideRight asideRight"
+        "asideLeft main main main main main asideRight asideRight"
+        "asideLeft main main main main main asideRight asideRight"
+        "footer footer footer footer footer footer footer footer"
+        "footer footer footer footer footer footer footer footer"
+        "footer footer footer footer footer footer footer footer"
+        "footer footer footer footer footer footer footer footer"
+    }
+    header {
+        grid-area: header;
+    }
+    main {
+        grid-area: main;
+        border: solid 15px;
+        border-image: linear-gradient(180deg, rgba(58, 135, 180, 0.267), rgba(60, 125, 165, 0)) 1;
+        padding-top: 7px;
+        padding-bottom: 3px;
+        margin-left: 10px;  
+    }
+    aside.left {
+        grid-area:asideLeft;
+        padding-left:15px;
+        display:flex;
+        flex-flow: column;
+        margin-top:45%;
+        color:rgb(88, 148, 156);
+    }
+    aside.right {
+        grid-area: asideRight;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin-left: 10%;
+    }
+    footer {
+        grid-area: footer;
+        color:slategray;
+        font-size: 15px;
+        text-align: center;
+        margin-top: 10%;
+    }
+    a {
+        text-decoration: none;
+        color:rgba(184, 180, 179, 0.884);
+        font-weight: 700;
+        
+    }
+    a:hover {
+        text-decoration: underline;
+    }
+    .insta {
+        font-size:10px;color:red"
+    }
+    .instaicon {
+        width: 40px;
+        height: 40px;
+        border-radius: 10px;
+    }
+    h1 {
+        font-weight: 1000;
+        color: rgb(221, 238, 235);
+        font-size: 40px;
+        font-family: copperplate gothic ;
+        background-image:url("/Headerpicdark.jpg");
+        margin-bottom: 5px;
+        margin-top: 5px;
+    }
+    h2 {
+        font-weight: 1000;
+        color: rgb(221, 238, 235);
+        font-size: 25px;
+        font-family: copperplate gothic ;
+        margin-bottom: 12.5;
+        margin-top: 5px;
+    }
+    h3.complete {
+        display: none;
+    }
+    .image1 {
+        width: 60%;
+        margin-bottom:75px;
+        border-radius: 20px;
+        border-style:inset;
+        border-color: rgba(229, 159, 147, 0.322);
+        border-width: 5px;
+    }
+    .figcaption1 {
+        color: white;
+        margin-bottom:70px;
+        text-align: left;
+    }
+    .image2 {
+        width:60%;
+        margin-bottom:75px;
+        border-radius: 20px;
+        border-style:inset;
+        border-color: rgba(229, 159, 147, 0.322);
+        border-width: 5px;
+    }
+    .image3 {
+        width:60%;
+        margin-bottom:75px;
+        border-radius: 20px;
+        border-style:inset;
+        border-color: rgba(229, 159, 147, 0.322);
+        border-width: 5px;
+    }
+    .image4 {
+        width:60%;
+        border-radius: 20px;
+        border-style:inset;
+        border-color: rgba(229, 159, 147, 0.322);
+        border-width: 5px;
+    }
+    .image5{
+        width:60%;
+        border-radius: 10px;
+    }
+    body {
+        background-color: rgb(19, 27, 27);
+        font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-seri;
+        font-size: 15px;
+        text-indent: 8px;
+        padding-bottom: 30px;
+    }
+    .menu {
+        grid-area: menu;
+        display: flex;
+        flex-direction: row;
+        font-family: copperplate gothic;
+        font-size: 250%;
+        align-items:center;
+        color:rgb(161, 176, 192); 
+        border: solid 10px rgba(64, 88, 88, 0.233);
+        border-style:ridge ;
+        padding-right: 50px;
+        padding-left: 50px;
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    #toggle {
+        background-color: rgba(99, 204, 204, 0.616);
+        border-radius: 5px;
+        color: rgba(164, 204, 189, 0.5);
+        padding: 12px 16px;
+        font-size: 20px;
+        cursor: pointer;
+        border-width: 10px;
+        border-color: currentColor;
+        margin-left:150px;
+    }
+    .a2 {
+        display: flex;
+        flex-direction: column;
+        margin-top: 90px;
+        margin-bottom: 90px;
+    }
+    .sideMenu {
+        display: none;
+        width: 80%;
+        font-family: copperplate gothic;
+        text-align: center;
+        background-color: rgba(80, 91, 94, 0.212);
+        margin-top: 25px;
+        border:solid;
+        border-style:ridge;
+        border-color: rgba(47, 79, 79, 0.384);
+        border-radius: 20px;
+    }
+    #stories_content {
+        color:white;
+    }
+    form {
+        width: 400px;
+      }
+      
+      .errorMsg {
+        color: red;
+      }
+      
+      input.was-validated:invalid {
+        color: red;
+        border: 1px solid red;
+      }
+      
+      input.was-validated:invalid ~ div {
+        display: block;
+      }
+      
+      input:valid ~ div {
+        display: none;
+      }
+      
+      input:invalid ~ div {
+        display: none;
+      }
+      
+      .container {
+        width: 80%;
+        max-width: 1200px;
+        margin-left: 0px;
+        color:rgb(84, 146, 161);
+        font-weight: bold;
+      }
+      
+      .container * {
+        -webkit-box-sizing: border-box;
+                box-sizing: border-box;
+      }
+      
+      .flex {
+        list-style-type: none;
+        padding: 0;
+        max-width:fit-content;
+        margin: 0 auto;
+      }
+      
+      .flex li {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: top;
+        -webkit-box-pack: end;
+            -ms-flex-pack: end;
+                justify-content: flex-start;
+      }
+      
+      .flex li li input[type="text"],
+      .flex li textarea {
+        padding: 5px;
+        font: normal 16px/1.5 sans-serif;
+        background-color: rgba(207, 236, 241, 0.938);
+        
+      }
+      
+      .flex button {
+        padding: 22px 46px;
+        font: normal 22px/1.5 sans-serif;
+        border:inset;
+        background: #73d81567;
+        color: #84b3c0;
+        font-weight: bolder;
+        text-transform: uppercase;
+        letter-spacing: .09em;
+        border-radius: 30px;
+        cursor: pointer;
+        
+      }
+      
+      .flex > li {
+        margin-bottom: 20px;
+      }
+      
+      .flex > li > label {
+        -webkit-box-flex: 1;
+            -ms-flex: 1 0 140px;
+                flex: 1 0 140px;
+        max-width: 200px;
+      }
+      
+      .flex > li + * {
+        -webkit-box-flex: 1;
+            -ms-flex: 1 0 500px;
+                flex: 1 0 500px;
+      }
+      
+      .flex > input[type='radio'] ~ div.errorMsg,
+      .flex > input[type='checkbox'] ~ div.errorMsg {
+        -webkit-box-flex: 1;
+            -ms-flex: 1 0 350px;
+                flex: 1 0 350px;
+        text-align: right;
+      }
+}
+@media screen and (orientation:portrait) and (min-width:700px) {
+    .grid-container {
+        display: grid;
+        grid-template-columns: repeat(8,1fr);
+        grid-template-rows: repeat(15,1fr);
+        grid-template-areas:
+        "header header header header header header header header"
+        "menu menu menu menu menu menu menu menu"
+        "menu menu menu menu menu menu menu menu"
+        "main main main main main main main main"
+        "main main main main main main main main"
+        "main main main main main main main main"
+        "main main main main main main main main"
+        "main main main main main main main main"
+        "main main main main main main main main"
+        "asideLeft asideLeft asideLeft asideLeft asideLeft asideLeft asideLeft asideLeft"
+        "asideLeft asideLeft asideLeft asideLeft asideLeft asideLeft asideLeft asideLeft"
+        "asideRight asideRight asideRight asideRight maiasideRightn asideRight asideRight asideRight"
+        "asideRight asideRight asideRight asideRight asideRight asideRight asideRight asideRight"
+        "footer footer footer footer footer footer footer footer"
+        "footer footer footer footer footer footer footer footer"
+    }
+}

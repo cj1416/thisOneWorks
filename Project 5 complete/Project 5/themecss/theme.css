@@ -1,0 +1,237 @@
+/*Updates,
+-.menu: added text align left
+
+*/
+
+
+@media screen and (min-width:701px) {
+    .grid-container {
+        display: grid;
+        grid-template-columns: repeat(8,1fr);
+        grid-template-rows: repeat(11,1fr);
+        grid-template-areas:
+        "header header header header header header header header"
+        "main main main main main main . ."
+        "main main main main main main menu menu"
+        "main main main main main main . ."
+        "asideRight asideRight asideRight asideRight asideLeft asideLeft asideLeft ."
+        "asideRight asideRight asideRight asideRight asideLeft asideLeft asideLeft ."
+        "asideRight asideRight asideRight asideRight asideLeft asideLeft asideLeft ."
+        "asideRight asideRight asideRight asideRight asideLeft asideLeft asideLeft ."
+        "asideRight asideRight asideRight asideRight asideLeft asideLeft asideLeft ."
+        "footer footer footer footer footer footer footer footer"
+        "footer footer footer footer footer footer footer footer"
+        
+        
+    }
+    a {
+        text-decoration: none;
+        color:rgba(228, 201, 195, 0.884);
+    }
+    .image1{
+        width: 60%;
+        border-color: rgba(51, 84, 230, 0.192);  
+        
+    }
+    .image2 {
+        width: 70%;
+        border-color: rgba(51, 84, 230, 0.192);
+        
+    }
+    .image3 {
+        width: 60%;
+        border-color: rgba(51, 84, 230, 0.192);
+    }
+    .image4 {
+        width: 50%;
+        border-radius: 20px;
+        border-color: rgba(51, 84, 230, 0.192);
+        margin-left:-10px;
+        
+    }
+    body {
+        background-image: linear-gradient(rgba(132, 235, 175, 0.438), rgba(209, 240, 250, 0.801), rgb(170, 242, 252));
+        font-family:Serif, Garamond, Verdana;
+    }
+    .menu {
+        width: 40%;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        text-align: left;
+        background-color: rgba(130, 129, 143, 0.199);
+        border-style:double;
+        border-color: rgba(230, 217, 201, 0.384);
+        border-radius: 60px;
+        border-width: 25px;  
+    }
+    #toggle {
+        background-color: rgba(177, 177, 177, 0.74);
+        border-radius: 5px;
+        color: currentColor;
+        padding: 12px 16px;
+        font-size: 20px;
+        cursor: pointer;
+        border-width: 10px;
+        border-color: currentColor;
+    }
+    .main {
+        border-image: linear-gradient(180deg, rgba(228, 209, 125, 0.596), rgba(193, 199, 202, 0.486), rgba(193, 199, 202, 0)) 1; 
+    }
+    aside.left {
+        flex-flow:row;
+        color:rgba(44, 110, 99, 0.781);
+        font-size: 40px;
+    }
+    aside.right {
+        flex-wrap: wrap;
+        align-content: flex-start;
+    }
+    #theFig {
+        margin-left: 0px;
+    }
+    .article {
+        color:rgb(95, 11, 192);
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        font-size: 20px;
+    }
+    h2 {
+        color:rgba(26, 65, 58, 0.781);
+        font-size: 50px;
+        text-decoration:underline;
+    }
+    .instaicon {
+        width: 80px;
+        height: 80px;
+        border-radius: 10px;
+    }
+    .footer {
+        color:rgb(88, 23, 23);
+    }
+    form {
+        width: 400px;
+      }
+      
+      .errorMsg {
+        color: red;
+      }
+      
+      input.was-validated:invalid {
+        color: red;
+        border: 1px solid red;
+      }
+      
+      input.was-validated:invalid ~ div {
+        display: block;
+      }
+      
+      input:valid ~ div {
+        display: none;
+      }
+      
+      input:invalid ~ div {
+        display: none;
+      }
+      
+      .container {
+        width: 80%;
+        max-width: 1200px;
+        margin-left: 0px;
+        color:rgb(238, 184, 8);
+        font-weight: bold;
+      }
+      
+      .container * {
+        -webkit-box-sizing: border-box;
+                box-sizing: border-box;
+      }
+      
+      .flex {
+        list-style-type: none;
+        padding: 0;
+        max-width:fit-content;
+        margin: 0 auto;
+      }
+      
+      .flex li {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: top;
+        -webkit-box-pack: end;
+            -ms-flex-pack: end;
+                justify-content: flex-start;
+      }
+      
+      .flex li li input[type="text"],
+      .flex li textarea {
+        padding: 5px;
+        font: normal 16px/1.5 sans-serif;
+        background-color: rgba(232, 248, 220, 0.938);
+        
+      }
+      
+      .flex button {
+        padding: 22px 46px;
+        font: normal 22px/1.5 sans-serif;
+        border:inset;
+        background: #b2b4b067;
+        color: #3a4e53;
+        font-weight: bolder;
+        text-transform: uppercase;
+        letter-spacing: .09em;
+        border-radius: 30px;
+        cursor: pointer;
+        
+      }
+      
+      .flex > li {
+        margin-bottom: 20px;
+      }
+      
+      .flex > li > label {
+        -webkit-box-flex: 1;
+            -ms-flex: 1 0 140px;
+                flex: 1 0 140px;
+        max-width: 200px;
+      }
+      
+      .flex > li + * {
+        -webkit-box-flex: 1;
+            -ms-flex: 1 0 500px;
+                flex: 1 0 500px;
+      }
+      
+      .flex > input[type='radio'] ~ div.errorMsg,
+      .flex > input[type='checkbox'] ~ div.errorMsg {
+        -webkit-box-flex: 1;
+            -ms-flex: 1 0 350px;
+                flex: 1 0 350px;
+        text-align: right;
+      }
+}
+@media screen and (orientation:portrait) and (min-width:700px) {
+    .grid-container {
+        display: grid;
+        grid-template-columns: repeat(8,1fr);
+        grid-template-rows: repeat(15,1fr);
+        grid-template-areas:
+        "header header header header header header header header"
+        "menu menu menu menu menu menu menu menu"
+        "menu menu menu menu menu menu menu menu"
+        "main main main main main main main main"
+        "main main main main main main main main"
+        "main main main main main main main main"
+        "main main main main main main main main"
+        "main main main main main main main main"
+        "main main main main main main main main"
+        "asideLeft asideLeft asideLeft asideLeft asideLeft asideLeft asideLeft asideLeft"
+        "asideLeft asideLeft asideLeft asideLeft asideLeft asideLeft asideLeft asideLeft"
+        "asideRight asideRight asideRight asideRight maiasideRightn asideRight asideRight asideRight"
+        "asideRight asideRight asideRight asideRight asideRight asideRight asideRight asideRight"
+        "footer footer footer footer footer footer footer footer"
+        "footer footer footer footer footer footer footer footer"
+    }
+}
